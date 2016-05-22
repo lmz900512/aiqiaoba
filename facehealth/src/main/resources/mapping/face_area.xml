@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aiqiaoba.facehealth.dao.Face_area_dao">
+	<resultMap type="com.aiqiaoba.facehealth.model.po.Face_area"
+		id="face_area">
+	</resultMap>
+	<select id="getAll" resultMap="face_area">
+		SELECT
+		id,face_area_name,status,face_area_desc,create_time,update_time,backup1
+		FROM face_area
+	</select>
+	<select id="getOneById" resultMap="face_area">
+		SELECT
+		id,face_area_name,status,face_area_desc,create_time,update_time,backup1
+		FROM face_area where id = #{id}
+	</select>
+</mapper>
